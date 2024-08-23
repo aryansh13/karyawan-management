@@ -62,7 +62,7 @@ Karyawan Management adalah aplikasi berbasis web yang dibangun dengan Laravel un
 
 ## Penggunaan
 
-- **Login**: Akses halaman login di ```bash http://localhost:8000/login.
-- **Daftar Karyawan**: Akses halaman daftar karyawan di ```bash http://localhost:8000/karyawan.
-- **Daftar Cuti**: Akses halaman daftar cuti di ```bash http://localhost:8000/cuti.
-- **Sisa Cuti**: Akses halaman sisa cuti di ```bash http://localhost:8000/sisa-cuti.
+- **Login**: Akses halaman login di `http://localhost:8000/login`.
+- **Daftar Karyawan**: Akses halaman daftar karyawan di `http://localhost:8000/karyawan`.
+- **Daftar Cuti**: Akses halaman daftar cuti di `http://localhost:8000/cuti`.
+- **Sisa Cuti**: Akses halaman sisa cuti di `http://localhost:8000/sisa-cuti`.
