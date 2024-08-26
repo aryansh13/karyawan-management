@@ -40,7 +40,6 @@ class DashboardController extends Controller
     return view('sisa_cuti', compact('sisa_cuti_list'));
 }
 
-
     public function karyawanBaru()
     {
         $karyawan = Karyawan::whereDate('tanggal_bergabung', '>=', date('Y-m-d'))->limit(3)->get();
@@ -60,22 +59,19 @@ class DashboardController extends Controller
     public function show($nomor_induk)
     {
         $karyawan = Karyawan::where('nomor_induk', $nomor_induk)->firstOrFail();
-        return response()->json($karyawan);
-        return view('dashboard', ['apiToken' => $user->api_token]);
+        return view('dashboard', compact('karyawan'));
     }
 
     public function store(Request $request)
     {
         $karyawan = Karyawan::create($request->all());
-        return response()->json($karyawan);
-        return view('dashboard', ['apiToken' => $user->api_token]);
+        return view('dashboard', compact('karyawan'));
     }
 
     public function update(Request $request, $nomor_induk)
     {
         $karyawan = Karyawan::findOrFail($nomor_induk);
         $karyawan->update($request->all());
-        return response()->json($karyawan);
-        return view('dashboard', ['apiToken' => $user->api_token]);
+        return view('dashboard', compact('karyawan'));
     }
 }
