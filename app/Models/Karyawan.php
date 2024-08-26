@@ -21,9 +21,7 @@ class Karyawan extends Model
 
     public $timestamps = false;
 
-    // Menonaktifkan auto-incrementing karena nomor_induk bukan integer
     public $incrementing = false;
 
-    // Jika nomor_induk bukan integer, tambahkan ini
     protected $keyType = 'string';
 }
